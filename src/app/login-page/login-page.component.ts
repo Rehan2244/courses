@@ -16,7 +16,7 @@ export class LoginPageComponent implements OnInit {
   }
   loginNow(){
     if(this.password==='dummy@123'){
-      this.router.navigate(['home'])
+      this.router.navigate(['courses'])
     }
   }
 }

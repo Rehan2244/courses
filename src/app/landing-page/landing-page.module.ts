@@ -2,14 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LandingPageRoutingModule } from './landing-page-routing.module';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LandingPageComponent } from './landing-page.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCommonModule } from '@angular/material/core';
+import { CoursesComponent } from './container/courses/courses.component';
+import { WishlistComponent } from './container/wishlist/wishlist.component';
+import { CartComponent } from './container/cart/cart.component';
+import { NavbarComponent } from './container/navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    LandingPageComponent
+    LandingPageComponent,
+    CoursesComponent,
+    WishlistComponent,
+    CartComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,

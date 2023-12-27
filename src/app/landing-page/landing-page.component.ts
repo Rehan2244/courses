@@ -12,16 +12,6 @@ export class LandingPageComponent implements OnInit {
     private api:ApiCallService
   ) { }
 
-  ngOnInit(): void {
-    this.getCourses()
-  }
-
-  courseList:Course[]=[];
-  getCourses(){
-    this.api.getCourses().subscribe((response:any)=>{
-      this.courseList=response
-    },err=>{
-      console.log('Error',err)
-    })
-  }
+    ngOnInit(): void {
+    }
 }

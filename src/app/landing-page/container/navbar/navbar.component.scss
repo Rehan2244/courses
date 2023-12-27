@@ -1,0 +1,25 @@
+.container{
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 4px;
+    .shopIcons{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        .shopIcon {
+            font-size: 28px;
+        }
+    }
+    .icon{
+        img{
+            height: 50px;
+        }
+    }
+}
+.shopIcon{
+    color: #fff;
+
+}

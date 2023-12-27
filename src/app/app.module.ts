@@ -7,14 +7,15 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './navbar/navbar.component';
-import {MatButtonModule} from '@angular/material/button'
+import { NavbarComponent } from './landing-page/container/navbar/navbar.component';
+import {MatButtonModule} from '@angular/material/button';
+import { CheckoutComponent } from './checkout/checkout.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    NavbarComponent
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
