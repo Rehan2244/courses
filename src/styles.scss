@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #000
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: "Montserrat" !important;font-weight: 800; transition: 0.5s all;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat.ttf');
+}
