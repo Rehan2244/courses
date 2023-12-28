@@ -1,5 +1,5 @@
 :root {
-  --primary: #3bd1a6
+  --primary: #78c9b2
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: "Montserrat" !important;font-weight: 800; transition: 0.5s all;
@@ -8,4 +8,19 @@ body { margin: 0; font-family: "Montserrat" !important;font-weight: 800; transit
 @font-face {
     font-family: 'Montserrat';
     src: url('./assets/fonts/Montserrat.ttf');
+}
+
+.noItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  flex-direction: column;
+  gap: 22px;
+  font-size: 22px;
+  font-weight: 500;
+  img{
+    height: 75px;
+    width: 75px;
+  }
 }

@@ -1,21 +1,10 @@
-<p>landing-page works!</p>
-<div class="courseContainer">
-    <div *ngFor="let course of courseList" class="courseCard">
-        <div class="courseHeader">
-            <mat-icon>book</mat-icon>
-            <div>
-                <div>{{course.courseName}}</div>
-                <div>{{course.author}}</div>
-            </div>
-        </div>
-        <div class="price" >
-            <div>
-                <div>{{course.actualPrice}}</div>
-                <div>{{course.discountPercentage}}</div>
-            </div>
-        </div>
-        <div>
-            <button mat-button color="primary">Primary</button>
-        </div>
+<div class="container">
+  <mat-paginator style="margin-right: 50px;" [length]="length" [pageSize]="pageSize" [pageSizeOptions]="[4, 8, 15, 50]"
+    (page)="getServerData($event)" aria-label="Select page">
+  </mat-paginator>
+  <div class="courseContainer">
+    <div *ngFor="let course of courseListTempList;let idx=index" class="courseCard">
+      <app-course-card [course]="course"></app-course-card>
     </div>
+  </div>
 </div>

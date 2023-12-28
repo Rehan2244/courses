@@ -12,6 +12,7 @@ export class LoginPageComponent implements OnInit {
     private router:Router
   ) { }
   password:string=''
+  email:string=''
   ngOnInit(): void {
   }
   loginNow(){

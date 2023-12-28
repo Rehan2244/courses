@@ -1,1 +1,16 @@
-<p>wishlist works!</p>
+<div class="container">
+    <div *ngIf="courseList.length;else elseBlock">
+      <h3>Wishlist Items below</h3>
+      <div class="subContainer">
+        <div class="courseCard" *ngFor="let course of courseList">
+          <app-course-card [course]="course"></app-course-card>
+        </div>
+      </div>
+    </div>
+    <ng-template #elseBlock>
+        <div class="noItem">
+            <img src="./assets/images/fav.png" alt="">
+            <div>Wishlist is empty add items in wishlist for later</div>
+        </div>
+    </ng-template>
+</div>

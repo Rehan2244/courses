@@ -1,3 +1,19 @@
-<h1>Login now</h1>
-<input type="text" [(ngModel)]="password">
-<input type="submit" (click)="loginNow()">
+<div class="loginContainer">
+    <div class="loginSubContainer">
+        <img src="./assets/images/logo.gif" alt="">
+        <h1>Login now</h1>
+            <div class="example-form" style="display: flex;flex-direction: column;">
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <mat-icon matSuffix>email</mat-icon>
+                <input [(ngModel)]="email" type="email" matInput placeholder="dummy@email.com">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <mat-icon matSuffix>mode_edit</mat-icon>
+                <input [(ngModel)]="password" type="password" matInput placeholder="dummy@123">
+              </mat-form-field>
+            </div>
+        <button mat-raised-button color="primary" type="submit" (click)="loginNow()">Login</button>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="courseHeader">
+    <mat-icon>book</mat-icon>
+    <div class="rightBlock">
+        <div style="display: flex;">
+            <div class="course">{{course.courseName}}</div>
+            <div (click)="route.navigate(['./courses/porduct-detail'])" ><mat-icon>call_made</mat-icon></div>
+        </div>
+        <div class="author"> <span style="font-size: 10px;">by</span> {{course.author}}</div>
+        <div class="price" >
+            <div [style.text-decoration]="course.discountPercentage!='0'?'line-through':'none'">{{course.actualPrice}}</div>
+            <div class="offer" *ngIf="course.discountPercentage!='0'">
+                <div style="font-weight: 500;" >{{calculatePercentage(course.discountPercentage,course.actualPrice)}}</div>
+                <div class="percent">{{course.discountPercentage}} off</div>
+            </div>
+        </div>
+        <div class="buttons" *ngIf="route.url!='/courses/cart'">
+            <button class="cart" *ngIf="!checkForCartItems(course)" mat-raised-button (click)="addto('cart',course)" color="primary">Add to cart <mat-icon>shopping_cart</mat-icon> </button>
+            <button class="cart" *ngIf="checkForCartItems(course)" mat-button [disabled]="true" color="primary">Added to cart</button>
+            <mat-icon *ngIf="!checkForWishlistItems(course)" mat-button (click)="addto('wishlist',course)" style="color:#888" >favorite_border</mat-icon>
+            <mat-icon *ngIf="checkForWishlistItems(course)" (click)="storage.removeFromWishlist(course)" mat-button color="warn">favorite</mat-icon>
+        </div>
+        <div class="buttons" *ngIf="route.url=='/courses/cart'">
+            <div></div>
+            <button class="cart" *ngIf="checkForCartItems(course)" (click)="storage.removeFromCart(course)" mat-button color="warn" >Remove from cart <mat-icon>error</mat-icon> </button>
+        </div>
+    </div>
+</div>

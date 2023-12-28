@@ -3,13 +3,12 @@
     gap: 12px;
     padding: 20px;
     flex-wrap: wrap;
+    margin: 10px 50px;
     .courseCard{
         border: 1px solid black;
         padding-block: 8px;
         padding-inline: 12px;
         width: 20% ;
-        .courseHeader{
-            display: flex;
-        }
+        flex-grow: 1;
     }
 }

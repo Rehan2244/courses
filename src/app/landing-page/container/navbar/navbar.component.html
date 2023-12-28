@@ -1,9 +1,17 @@
 <div class="container">
     <div class="icon">
-        <img src="./assets/images/logo.gif" />
+        <img src="./assets/images/logo.gif" (click)="goto('./courses')" />
+    </div>
+    <div>
+        <div class="searchBar">
+            <input type="text" [(ngModel)]="searchKey" (keyup)="search()">
+            <mat-icon>search</mat-icon>
+        </div>
     </div>
     <div class="shopIcons">
-        <mat-icon class="shopIcon">shopping_cart</mat-icon>
-        <mat-icon class="shopIcon">favorite</mat-icon>
+        <mat-icon class="shopIcon" (click)="goto('./courses')">book</mat-icon>
+        <mat-icon [matBadge]="checkBadge('cart')" (click)="goto('./courses/cart')" class="shopIcon">shopping_cart</mat-icon>
+        <mat-icon [matBadge]="checkBadge('wishlist')" (click)="goto('./courses/wishlist')" class="shopIcon">favorite</mat-icon>
+        <mat-icon (click)="goto('./courses/profile')" class="shopIcon">person</mat-icon>
     </div>
 </div>

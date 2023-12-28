@@ -1,0 +1,58 @@
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    .cart{
+        font-size: 12px;
+        font-family:'Montserrat' ;
+    }
+}
+:host{
+
+    display:block; 
+    width: 100% !important;
+    .courseHeader{
+        display: flex;
+        width: 100%;
+        .rightBlock{
+            margin-left: 10px;
+            display:flex;
+            flex-direction: column;
+            width: 83%;
+            justify-content: space-between;
+            flex:1;
+            .course{
+                font-size: 18px;
+                font-weight: 600;
+                color: #555;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 90%;
+            }
+            .author{
+                font-size: 12px;
+                font-weight: 600;
+                color: #666;
+            }
+            .price{
+                align-items: center;
+                margin-top: 12px;
+                .offer{
+                    display: flex;
+                    align-items: center;
+                    .percent{
+                        font-size: 10px;
+                        margin-left: 8px;
+                        color:#59a659;
+                        margin-right: 6px;
+                        background-color: #ddffdd;
+                        padding-inline: 8px;
+                        border-radius:5px;
+                    }
+                }
+            }
+        }
+    }
+}

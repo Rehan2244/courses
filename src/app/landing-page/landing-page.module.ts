@@ -5,26 +5,39 @@ import { LandingPageRoutingModule } from './landing-page-routing.module';
 import { LandingPageComponent } from './landing-page.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCommonModule } from '@angular/material/core';
+import { MatBadgeModule } from '@angular/material/badge';
 import { CoursesComponent } from './container/courses/courses.component';
 import { WishlistComponent } from './container/wishlist/wishlist.component';
 import { CartComponent } from './container/cart/cart.component';
 import { NavbarComponent } from './container/navbar/navbar.component';
-
+import { CourseCardComponent } from './container/course-card/course-card.component';
+import {MatFormFieldModule, MatLabel} from '@angular/material/form-field'
+import {MatInputModule} from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { ProfileComponent } from './container/profile/profile.component'
+import { FormsModule } from '@angular/forms';
+import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 @NgModule({
   declarations: [
     LandingPageComponent,
     CoursesComponent,
     WishlistComponent,
     CartComponent,
-    NavbarComponent
+    NavbarComponent,
+    CourseCardComponent,
+    ProfileComponent,
+    ProductDetailComponent
   ],
   imports: [
     CommonModule,
     LandingPageRoutingModule,
     MatIconModule,
     MatButtonModule,
-    MatCommonModule
+    MatBadgeModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatPaginatorModule
   ]
 })
 export class LandingPageModule { }

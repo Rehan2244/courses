@@ -16,6 +16,21 @@
     .icon{
         img{
             height: 50px;
+            margin-left: 20px;
+        }
+    }
+    .searchBar{
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        padding-inline: 6px;
+        padding-block: 4px;
+        border-radius: 4px;
+        input{
+            border:0;
+            &:focus{
+                outline: none;
+            }
         }
     }
 }
