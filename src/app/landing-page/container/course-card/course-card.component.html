@@ -1,9 +1,9 @@
 <div class="courseHeader">
     <mat-icon>book</mat-icon>
     <div class="rightBlock">
-        <div style="display: flex;">
+        <div style="display: flex;justify-content: space-between;">
             <div class="course">{{course.courseName}}</div>
-            <div (click)="route.navigate(['./courses/porduct-detail'])" ><mat-icon>call_made</mat-icon></div>
+            <div (click)="route.navigate(['./courses/porduct-detail'])" style="margin-right: 20px;" ><mat-icon>call_made</mat-icon></div>
         </div>
         <div class="author"> <span style="font-size: 10px;">by</span> {{course.author}}</div>
         <div class="price" >

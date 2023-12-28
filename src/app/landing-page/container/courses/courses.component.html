@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="courseListTempList.length">
   <mat-paginator style="margin-right: 50px;" [length]="length" [pageSize]="pageSize" [pageSizeOptions]="[4, 8, 15, 50]"
     (page)="getServerData($event)" aria-label="Select page">
   </mat-paginator>
@@ -8,3 +8,6 @@
     </div>
   </div>
 </div>
+<div style="display: flex;justify-content: center;margin-top: 50px;" *ngIf="!courseListTempList.length">
+    <div style="font-size: 22px;font-weight: 500;">No Record found</div>
+  </div>

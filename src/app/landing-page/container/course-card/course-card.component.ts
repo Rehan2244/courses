@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Course } from 'src/app/common/api-call.service';
 import { StorageService } from 'src/app/common/storage.service';
 
@@ -12,7 +13,8 @@ export class CourseCardComponent implements OnInit {
 
   constructor(
     public storage:StorageService,
-    public route:Router
+    public route:Router,
+    private toastr:ToastrService
   ) { 
     this.course={
       courseName:'',
@@ -31,12 +33,17 @@ export class CourseCardComponent implements OnInit {
   addto(type:string,course:Course){
     if(type==='cart'){
       this.storage.cart.next([...this.storage.cart.value,course])
+      this.showSuccess()
     }
     if(type==='wishlist'){
       this.storage.wishlist.next([...this.storage.wishlist.value,course])
     }
   }
 
+  showSuccess() {
+    this.toastr.success('Course successfully added in the cart.', 'Toastr fun!');
+  }
+  
   checkForCartItems(course:Course){
     let added=false
     this.storage.cart.value.forEach(el=>{
