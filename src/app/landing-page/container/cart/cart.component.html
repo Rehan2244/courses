@@ -12,8 +12,29 @@
                         <div>{{course.courseName}}</div>
                         <div>{{course.actualPrice}}</div>
                     </div>
+                    <div class="itemDiv" style="margin-top: 20px;">Cart Value </div>
+                    <div class="cartItems">
+                        <div>Total Items</div>
+                        <div>{{courseList.length}}</div>
+                    </div>
+                    <div class="cartItems">
+                        <div>Course Price</div>
+                        <div>{{getTotalPrice().total}}</div>
+                    </div>                    
+                    <div class="cartItems">
+                        <div>Discounted Price</div>
+                        <div>{{getTotalPrice().discountPrice}}</div>
+                    </div>
+                    <div class="cartItems" style="font-weight: 600;">
+                        <div>Total</div>
+                        <div>{{getTotalPrice().discountPrice}}</div>
+                    </div>
+
+                    <div style="margin-top: 30px;text-align: center;">
+                        <p>You save total off {{getTotalPrice().savings}}</p>
+                    </div>
                     <div class="checkoutBtn">
-                        <button mat-raised-button color="primary">Checkout</button>
+                        <button (click)="openDialog()" mat-raised-button color="primary">Checkout</button>
                     </div>
                 </div>
             </div>

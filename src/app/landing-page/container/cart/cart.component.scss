@@ -46,3 +46,13 @@
         }
     }
 }
+
+
+@media screen and (max-width:580px) {
+    .subContainer{
+        flex-direction: column;
+        .courseCardContainer,.checkoutDetail{
+            width: 100%;
+        }
+    }
+}

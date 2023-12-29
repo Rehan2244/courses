@@ -8,7 +8,25 @@
         border: 1px solid black;
         padding-block: 8px;
         padding-inline: 12px;
-        width: 20% ;
         flex-grow: 1;
+    }
+}
+
+@media (min-width:361px) and (max-width:768px) {
+    .courseContainer{
+        margin: 0;
+    }
+    .courseCard{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .courseContainer{
+        margin: 0;
+        padding: 5px;
+    }
+    .courseCard{
+        width: 100% ;
     }
 }

@@ -1,7 +1,7 @@
 
 <div class="container">
     <div class="profile">
-        <img src="" alt="">
+        <img src="https://picsum.photos/200" alt="" style="width: 100px;height: 100px; border-radius: 50%;">
     </div>
     <div class="inputs" style="display: flex;flex-direction: column;">
         <mat-form-field class="example-full-width">
@@ -24,5 +24,7 @@
             <mat-icon matPrefix>mode_edit</mat-icon>
             <input [(ngModel)]="aboutYourself" type="text" matInput placeholder="dummy@123">
         </mat-form-field>
+        <label>Upload profile:</label>
+        <input (change)="pickProfile($event)" type="file" placeholder="dummy@123">
     </div>
 </div>

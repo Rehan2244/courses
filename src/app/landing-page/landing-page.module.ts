@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { CoursesComponent } from './container/courses/courses.component';
 import { WishlistComponent } from './container/wishlist/wishlist.component';
-import { CartComponent } from './container/cart/cart.component';
+import { CartComponent, SuccessCheckoutComponent } from './container/cart/cart.component';
 import { NavbarComponent } from './container/navbar/navbar.component';
 import { CourseCardComponent } from './container/course-card/course-card.component';
 import { MatFormFieldModule,MatLabel} from '@angular/material/form-field'
@@ -17,6 +17,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { ProfileComponent } from './container/profile/profile.component'
 import { FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './container/product-detail/product-detail.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     LandingPageComponent,
@@ -26,7 +27,8 @@ import { ProductDetailComponent } from './container/product-detail/product-detai
     NavbarComponent,
     CourseCardComponent,
     ProfileComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    SuccessCheckoutComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +39,8 @@ import { ProductDetailComponent } from './container/product-detail/product-detai
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDialogModule
   ]
 })
 export class LandingPageModule { }

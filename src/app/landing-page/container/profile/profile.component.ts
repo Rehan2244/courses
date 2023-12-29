@@ -17,5 +17,7 @@ export class ProfileComponent implements OnInit {
   roleDescription:string='';
   ngOnInit(): void {
   }
-
+  pickProfile(event:any){
+    console.log(event.target.files)
+  }
 }

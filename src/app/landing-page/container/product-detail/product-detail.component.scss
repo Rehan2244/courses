@@ -1,0 +1,15 @@
+.subContainer{
+    display: flex;
+    .col{
+        width: 50%;
+    }
+}
+@media screen and (max-width:400px) {
+.subContainer{
+    flex-direction: column-reverse;
+    gap: 20px;
+    .col{
+        width: 100%;
+    }
+}
+}

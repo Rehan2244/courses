@@ -1,1 +1,31 @@
-<p>product-detail works!</p>
+
+<div class="container" style="padding: 20px;">
+    <h4  style="display: flex;flex-wrap: wrap;">
+        <div class="links" (click)="goTo('courses')" >Home</div>
+        <mat-icon>chevron_right</mat-icon>
+        <div class="links" (click)="goTo('courses')">Courses</div>
+        <mat-icon>chevron_right</mat-icon>
+        <div>{{courseDetail.courseName}}</div>
+    </h4>
+    <div class="subContainer" >
+        <div class="col">
+            <div style="font-size: 20px;font-weight: 600;">{{courseDetail.courseName}}</div>
+            <div style="color: #777;">by <span>{{courseDetail.author}}</span></div>
+            <div style="margin-top: 20px;">{{courseDetail.actualPrice}}</div>
+            <div>Discount on price: {{courseDetail.discountPercentage}}</div>
+            <div>
+                <h3>Course Videos</h3>
+                <div style="display: flex;gap:12px">
+                    <img (click)="videoSelected=true" *ngFor="let item of carousel" [src]="item" style="height: 70px;" />
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <video *ngIf="videoSelected" controls width="100%" autoplay >
+                <source src="./assets/video/sample.mp4" type="video/mp4">
+
+              Your browser does not support the video tag.
+              </video>
+        </div>
+    </div>
+</div>

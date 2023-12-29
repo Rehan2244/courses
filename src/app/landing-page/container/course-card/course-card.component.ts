@@ -33,15 +33,16 @@ export class CourseCardComponent implements OnInit {
   addto(type:string,course:Course){
     if(type==='cart'){
       this.storage.cart.next([...this.storage.cart.value,course])
-      this.showSuccess()
+      this.showSuccess('Course successfully added in the cart.')
     }
     if(type==='wishlist'){
       this.storage.wishlist.next([...this.storage.wishlist.value,course])
+      this.showSuccess('Course successfully added to the wishlist.')
     }
   }
 
-  showSuccess() {
-    this.toastr.success('Course successfully added in the cart.', 'Toastr fun!');
+  showSuccess(msg:string) {
+    this.toastr.success(msg);
   }
   
   checkForCartItems(course:Course){
@@ -67,5 +68,7 @@ export class CourseCardComponent implements OnInit {
     actualPrice=parseInt(actualPrice.split('₹')[1]);
     return off!=0? '₹'+(actualPrice-((actualPrice/100)*off)).toFixed(2):''
   }
-
+  goToCourseDetail(course:Course){
+    this.route.navigate(['./courses/porduct-detail'],{queryParams:{detail:JSON.stringify(course)}})
+  }
 }

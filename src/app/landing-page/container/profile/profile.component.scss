@@ -2,5 +2,26 @@
 
 .inputs{
     width: 50%;
-    margin: auto;
+    margin-left: 75px;
+    mat-icon{
+        padding-right: 12px;
+    }
+}
+.container{
+    padding-inline:100px;display: flex ;padding-block: 40px;
+}
+@media screen and (max-width:580px) {
+    .container{
+        flex-direction: column;
+        padding-inline: 10px;
+        justify-content: center;
+    }
+    .inputs{
+        width: 100%;
+        margin-left: 0px;
+        margin-inline: 10px;
+    }
+    .profile{
+        text-align: center;
+    }
 }
