@@ -22,4 +22,8 @@ describe('NavbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should search and navigate',()=>{
+    component.search()
+    component.goto('./courses/cart')
+  })
 });

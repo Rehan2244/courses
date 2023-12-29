@@ -10,8 +10,6 @@ export class AppComponent {
   constructor(
     private router:Router
   ){}
-  ngOnInit(){
-    console.log('Activated route is',this.router.url)
-  }
+  ngOnInit(){}
   title = 'courses';
 }

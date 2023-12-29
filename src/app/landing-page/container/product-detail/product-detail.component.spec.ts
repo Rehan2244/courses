@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProductDetailComponent } from './product-detail.component';
+import { RouterModule } from '@angular/router';
 
 describe('ProductDetailComponent', () => {
   let component: ProductDetailComponent;
@@ -8,6 +9,9 @@ describe('ProductDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[
+        RouterModule.forRoot([])
+      ],
       declarations: [ ProductDetailComponent ]
     })
     .compileComponents();
@@ -21,5 +25,8 @@ describe('ProductDetailComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should be able to navigate', () => {
+    component.goTo('courses')
   });
 });
