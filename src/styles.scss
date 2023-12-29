@@ -1,6 +1,6 @@
 @import 'ngx-toastr/toastr';
 :root {
-  --primary: #78c9b2
+  --primary: #84dfc5
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: "Montserrat" !important;font-weight: 800; transition: 0.5s all;
@@ -32,4 +32,9 @@ h1,h2,h3,h4,h5,h6,p,span{
 
 .links{
   cursor: pointer;;
+}
+
+.toasterCss{
+  bottom: 5px;
+  right: 10px;
 }

@@ -18,6 +18,7 @@ import { ProfileComponent } from './container/profile/profile.component'
 import { FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSidenavModule } from '@angular/material/sidenav';
 @NgModule({
   declarations: [
     LandingPageComponent,
@@ -40,7 +41,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     FormsModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSidenavModule
   ]
 })
 export class LandingPageModule { }

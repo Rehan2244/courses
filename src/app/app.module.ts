@@ -14,7 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { ToastrModule } from 'ngx-toastr';
-
+import {MatSidenavModule} from '@angular/material/sidenav'
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { ToastrModule } from 'ngx-toastr';
     MatInputModule,
     MatIconModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot({positionClass:'toasterCss'}),
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

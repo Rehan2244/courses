@@ -2,7 +2,8 @@
     <div class="icon">
         <img src="./assets/images/logo.gif" (click)="goto('./courses')" />
     </div>
-    <div>
+    <div style="display: flex;align-items: center;color:white">
+        <div (click)="openSideMenu()" class="sideMenu"><mat-icon>menu</mat-icon> </div>
         <div class="searchBar">
             <input type="text" [(ngModel)]="searchKey" (keyup)="search()">
             <mat-icon>search</mat-icon>

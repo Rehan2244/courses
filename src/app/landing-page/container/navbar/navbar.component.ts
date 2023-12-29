@@ -22,6 +22,7 @@ export class NavbarComponent implements OnInit {
   cartItems:Course[]=[]
   wishlistItems:Course[]=[]
   searchKey:any;
+  showFiller:boolean=false
   search(){
     this.storageService.searchValue.next(this.searchKey)
     this.router.navigate(['./courses'])
@@ -40,5 +41,11 @@ export class NavbarComponent implements OnInit {
   checkBadge(type:any){
     let service=(this.storageService as any)[type].value
     return service.length?service.length:''
+  }
+  openSideMenu(){
+    this.storageService.openSideMenu.next(
+      !this.storageService.openSideMenu.value
+      )
+      console.log('Value',this.storageService.openSideMenu.value)
   }
 }

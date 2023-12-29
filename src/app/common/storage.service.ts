@@ -10,7 +10,7 @@ export class StorageService {
   constructor() { }
   wishlist = new BehaviorSubject<Course[]>([]);
   cart = new BehaviorSubject<Course[]>([]);
-
+  openSideMenu = new BehaviorSubject(false);
   searchValue = new BehaviorSubject('');
   addToCart(course:Course){
     this.cart.next([...this.cart.value,course])
